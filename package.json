@@ -18,13 +18,10 @@
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
     "tsc": "tsc",
     "tsc:prod": "tsc -p tsconfig-release.json",
-    "install": "node ./scripts/InstallCap.js",
-    "uninstall": "node ./scripts/UninstallCap.js",
     "lint": "eslint --cache src/**/*.ts --ignore-pattern .gitignore",
     "lint:spec": "eslint --cache tests/**/*.ts --cache-file tests/.eslintcache --ignore-pattern .gitignore",
     "prettier:check": "prettier --check ./src",
-    "prettier:write": "prettier --write ./src",
-    "prepare": "husky"
+    "prettier:write": "prettier --write ./src"
   },
   "keywords": [
     "Dynatrace",

@@ -40,7 +40,6 @@ exports.getGradleVersionFileAsString = exports.getDynatraceConfigAsObject = expo
 var fs_1 = require("fs");
 var path_1 = require("path");
 var Logger_1 = require("../logger/Logger");
-var Ios_1 = require("../Ios");
 var PathHelper_1 = require("./PathHelper");
 var searchFilesInDirectoryRecursive = function (searchPath, fileExt, filteredDirectories) { return __awaiter(void 0, void 0, void 0, function () { return __generator(this, function (_a) {
     return [2, _searchFilePatternInDirectory(searchPath, [], fileExt, filteredDirectories, true, compareFileNames)];
@@ -321,11 +320,12 @@ var isGradleAvailable = function (isCap) { return isCap !== undefined && isCap
     : (0, fs_1.existsSync)((0, PathHelper_1.getAndroidGradleFile)((0, PathHelper_1.getAndroidPath)())); };
 exports.isGradleAvailable = isGradleAvailable;
 var getPlistAsPath = function (isCap) { return __awaiter(void 0, void 0, void 0, function () {
-    var result, e_1;
+    var result, Ios_1, e_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 2, , 3]);
+                Ios_1 = require("../Ios");
                 return [4, (0, Ios_1.searchForPListFile)()];
             case 1:
                 result = _a.sent();
