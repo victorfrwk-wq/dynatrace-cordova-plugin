@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "mabs-min": "10.0.0",
+    "name": "Dynatrace RUM for Mobile",
+    "version": "12.0"
+  },
+  "buildConfigurations": {
+    "capacitor": {
+      "source": {
+        "npm": "https://github.com/victorfrwk-wq/dynatrace-cordova-plugin"
+      }
+    }
+  }
+}

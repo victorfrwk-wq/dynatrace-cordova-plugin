@@ -1,0 +1,13 @@
+{
+  "appId": "com.dynatrace.rum.mobile",
+  "appName": "Dynatrace RUM for Mobile",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "DynatraceCordovaPlugin": {
+      "enabled": true
+    }
+  }
+}

@@ -4,8 +4,9 @@
     id="@dynatrace/cordova-plugin"
     version="2.309.1">
     <name>Dynatrace</name>
-    <description>Dynatrace Cordova Plugin</description>
+    <description>Dynatrace RUM Plugin for Cordova and Capacitor</description>
 
+    <!-- Cordova Hooks -->
     <hook type="after_plugin_add" src="scripts/Install.js"/>
     <hook type="before_plugin_install" src="scripts/Outsystems/npmInstall.js"/>
     <hook type="before_prepare" src="scripts/Outsystems/copyConfig.js"/>
@@ -13,6 +14,12 @@
 	<hook type="after_prepare" src="scripts/Instrument.js"/>
 	<hook type="after_build" src="scripts/CloseLog.js" />
 	<hook type="after_run" src="scripts/CloseLog.js" />
+    
+    <!-- Capacitor Hooks (New) -->
+    <hook type="capacitor:beforeSync" src="scripts/capacitor/CapacitorSync.js"/>
+    <hook type="capacitor:afterSync" src="scripts/capacitor/CapacitorInstrument.js"/>
+    <hook type="capacitor:afterBuild" src="scripts/capacitor/CapacitorClose.js"/>
+    <hook type="capacitor:afterRun" src="scripts/capacitor/CapacitorClose.js"/>
 
     <js-module src="networking/NativeNetworkInterceptorUtils.js" name="native-network-interceptor-utils" />
     <js-module src="networking/MobileFirstNetworkInterceptor.js" name="mobile-first-network-interceptor" />
