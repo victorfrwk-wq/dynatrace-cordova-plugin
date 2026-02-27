@@ -77,15 +77,17 @@
     "typescript": "^4.8.4"
   },
   "files": [
-    "assets/*",
-    "files/*",
+    "assets/**",
+    "files/**",
     "plugin.xml",
     "README.md",
     "LICENSE.md",
-    "other/*",
-    "networking/*",
-    "scripts/*",
-    "model/*",
+    "other/**",
+    "networking/**",
+    "scripts/**",
+    "model/**",
+    "ios/**",
+    "*.podspec",
     "typings/main.d.ts",
     "package.json"
   ],
