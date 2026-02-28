@@ -10,14 +10,6 @@
       "windows"
     ]
   },
-  "capacitor": {
-    "ios": {
-      "src": "ios"
-    },
-    "android": {
-      "src": "android"
-    }
-  },
   "typings": "typings/main.d.ts",
   "bin": {
     "doctorDynatrace": "./scripts/Doctor.js"

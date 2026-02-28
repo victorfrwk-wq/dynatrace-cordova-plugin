@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'files/iOS/Dynatrace.xcframework'
   s.frameworks = 'CoreLocation', 'CoreTelephony', 'Security', 'SystemConfiguration', 'MessageUI', 'WebKit'
   s.libraries = 'sqlite3', 'z', 'c++'
-  s.dependency 'Cordova'
+  s.dependency 'CapacitorCordova'
 end
