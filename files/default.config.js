@@ -6,7 +6,7 @@ module.exports = {
     },
 
     js : {
-        url : "https://tha19564.live.dynatrace.com?Api-Token=",
+        url : "https://tha19564.live.dynatrace.com/api/v1/rum/jsInlineScript/APPLICATION-1A68E8CAA3A154C1?Api-Token=<YOUR_DYNATRACE_API_TOKEN>",
     },
 
     android : {
