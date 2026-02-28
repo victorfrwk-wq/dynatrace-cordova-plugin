@@ -1,36 +1,48 @@
 module.exports = {
-    cordova: {
-        debug: false
+    cordova : {
+        debug : false,
+        autoUpdate : true,
+        cspURL: "https://tha19564.live.dynatrace.com"
     },
 
-    js: {
-        url: "",
-        mode: 4
+    js : {
+        url : "https://tha19564.live.dynatrace.com?Api-Token=",
     },
 
-    android: {
+    android : {
         // Those configs are copied 1:1
-        config: `
+        config : `
         dynatrace {
             configurations {
                 defaultConfig {
                     autoStart {
-                        applicationId 'Insert your ApplicationID from Config'
-                        beaconUrl 'Insert your BeaconURL from Config'
+                        applicationId '244915ad-72ea-4508-b1bb-2089e626a6f0'
+                        beaconUrl 'https://bf76574zti.bf.dynatrace.com/mbeacon'
                     }
+                    hybridWebView {
+                        enabled true
+                    }
+                    agentBehavior.startupLoadBalancing true
+                    agentBehavior.startupWithGrailEnabled true
                 }
             }
         }
         `
     },
 
-    ios: {
+    ios : {
         // Those configs are copied 1:1
-        config: `
+        config : `
         <key>DTXApplicationID</key>
-        <string>Insert your ApplicationID from Config</string>
+        <string>244915ad-72ea-4508-b1bb-2089e626a6f0</string>
         <key>DTXBeaconURL</key>
-        <string>Insert your ClusterURL from Config</string>
+        <string>https://bf76574zti.bf.dynatrace.com/mbeacon</string>
+        <key>DTXHybridApplication</key>
+        <string>true</string>
+        <key>DTXStartupLoadBalancing</key>
+        <true/>
+        <key>DTXStartupWithGrailEnabled</key>
+        <true/>
         `
     }
 }
