@@ -80,6 +80,7 @@
     "model/**",
     "ios/**",
     "*.podspec",
+    "capacitor-plugin.json",
     "typings/main.d.ts",
     "package.json"
   ],

@@ -4,36 +4,28 @@
     "name": "@dynatrace/cordova-plugin",
     "version": "2.309.1",
     "description": "Dynatrace RUM Mobile plugin for Capacitor applications",
-    "capacitor": {
-      "ios": {
-        "src": "ios"
-      },
-      "android": {
-        "src": "android"
-      }
-    },
     "type": "capacitor"
   },
   "platforms": ["ios", "android"],
   "scripts": {
-    "sync:ios": "node scripts/capacitor/CapacitorSync.js && node scripts/capacitor/CapacitorInstrument.js ios",
-    "sync:android": "node scripts/capacitor/CapacitorSync.js && node scripts/capacitor/CapacitorInstrument.js android",
-    "instrument:ios": "node scripts/capacitor/CapacitorInstrument.js ios",
-    "instrument:android": "node scripts/capacitor/CapacitorInstrument.js android",
-    "close": "node scripts/capacitor/CapacitorClose.js"
+    "sync:ios": "node scripts/InstallCap.js && node scripts/InstrumentCap.js --capacitor=ios",
+    "sync:android": "node scripts/InstallCap.js && node scripts/InstrumentCap.js --capacitor=android",
+    "instrument:ios": "node scripts/InstrumentCap.js --capacitor=ios",
+    "instrument:android": "node scripts/InstrumentCap.js --capacitor=android",
+    "close": "node scripts/CloseLog.js"
   },
   "hooks": {
     "ios": {
-      "beforeSync": "scripts/capacitor/CapacitorSync.js",
-      "afterSync": "scripts/capacitor/CapacitorInstrument.js",
-      "afterBuild": "scripts/capacitor/CapacitorClose.js",
-      "afterRun": "scripts/capacitor/CapacitorClose.js"
+      "beforeSync": "scripts/InstallCap.js",
+      "afterSync": "scripts/InstrumentCap.js",
+      "afterBuild": "scripts/CloseLog.js",
+      "afterRun": "scripts/CloseLog.js"
     },
     "android": {
-      "beforeSync": "scripts/capacitor/CapacitorSync.js",
-      "afterSync": "scripts/capacitor/CapacitorInstrument.js",
-      "afterBuild": "scripts/capacitor/CapacitorClose.js",
-      "afterRun": "scripts/capacitor/CapacitorClose.js"
+      "beforeSync": "scripts/InstallCap.js",
+      "afterSync": "scripts/InstrumentCap.js",
+      "afterBuild": "scripts/CloseLog.js",
+      "afterRun": "scripts/CloseLog.js"
     }
   }
 }

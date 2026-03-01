@@ -14,13 +14,6 @@
 	<hook type="after_prepare" src="scripts/Instrument.js"/>
 	<hook type="after_build" src="scripts/CloseLog.js" />
 	<hook type="after_run" src="scripts/CloseLog.js" />
-    
-    <!-- Capacitor Hooks (New) -->
-    <hook type="capacitor:beforeSync" src="scripts/capacitor/CapacitorSync.js"/>
-    <hook type="capacitor:afterSync" src="scripts/capacitor/CapacitorInstrument.js"/>
-    <hook type="capacitor:afterBuild" src="scripts/capacitor/CapacitorClose.js"/>
-    <hook type="capacitor:afterRun" src="scripts/capacitor/CapacitorClose.js"/>
-
     <js-module src="networking/NativeNetworkInterceptorUtils.js" name="native-network-interceptor-utils" />
     <js-module src="networking/MobileFirstNetworkInterceptor.js" name="mobile-first-network-interceptor" />
     <js-module src="other/DynatraceCordovaPlugin.js" name="dynatraceMobile">
